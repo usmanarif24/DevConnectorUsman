@@ -1,3 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://usman123:usman123@devconnectorusman.09nka.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://usman123:usman123@devconnectorusman.09nka.mongodb.net/<dbname>?retryWrites=true&w=majority",
+
+  "jwtSecret": "mysecrettoken"
 }
