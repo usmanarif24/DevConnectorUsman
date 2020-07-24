@@ -3,7 +3,7 @@ const router = express.Router();
 const auth = require("../../middleware/auth");
 const Profile = require("../../models/Profiles");
 const User = require("../../models/Users");
-const { check, validationResult } = require("express-validator/check");
+const { check, validationResult } = require("express-validator");
 
 //  @route    Get api/profile/me
 //  @desc     Get current user's profile
@@ -45,6 +45,7 @@ router.post(
         errors: errors.array(),
       });
     }
+
     const {
       company,
       website,
@@ -74,7 +75,7 @@ router.post(
       profileFields.skills = skills.split(",").map((skill) => skill.trim());
     }
 
-    //Build Social Object
+    // /Build Social Object
 
     profileFields.social = {};
     if (youtube) profileFields.social.youtube = youtube;
@@ -82,8 +83,6 @@ router.post(
     if (facebook) profileFields.social.facebook = facebook;
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
-
-    // console.log(profileFields.skills);
 
     try {
       let profile = await Profile.findOne({
@@ -111,20 +110,9 @@ router.post(
       profile = new Profile(profileFields);
       await profile.save();
       res.json(profile);
-
-      // // Check if handle exists
-      // Profile.findOne({ handle: profileFields.handle }).then((profile) => {
-      //   if (profile) {
-      //     errors.handle = "That handle already exists";
-      //     res.status(400).json(errors);
-      //   }
-
-      //   // Save Profile
-      //   new Profile(profileFields).save().then((profile) => res.json(profile));
-      // });
     } catch (err) {
       console.error(err.message);
-      res.send(500).send("Server Error");
+      res.status(500).send("Server Error");
     }
   }
 );
