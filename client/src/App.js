@@ -6,11 +6,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Components/auth/Login";
 import Register from "./Components/auth/Register";
 import Alert from "./Components/Layout/Alert";
+import PrivateRoute from "./Components/Routing/PrivateRoute";
 //redux
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -32,6 +34,7 @@ const App = () => {
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
           </Switch>
         </section>
       </Router>
