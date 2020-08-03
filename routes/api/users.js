@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const User = require("../../models/Users"); //importing the user schema
 const { check, validationResult } = require("express-validator");
 const config = require("config");
-const User = require("../../models/Users"); //importing the user schema
 const gravatar = require("gravatar"); //importing gravatar
 //Importing bcrypt to encrypt passwords
 const bcrypt = require("bcryptjs");
