@@ -4,6 +4,8 @@ import Navbar from "./Components/Layout/Navbar";
 import Landing from "./Components/Layout/Landing";
 import CreateProfile from "./Components/profile-form/CreateProfile";
 import EditProfile from "./Components/profile-form/EditProfile";
+import AddExperience from "./Components/profile-form/AddExperience";
+import AddEducation from "./Components/profile-form/AddEducation";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Components/auth/Login";
 import Register from "./Components/auth/Register";
@@ -43,6 +45,16 @@ const App = () => {
               component={CreateProfile}
             />
             <PrivateRoute exact path='/edit-profile' component={EditProfile} />
+            <PrivateRoute
+              exact
+              path='/add-experience'
+              component={AddExperience}
+            />
+            <PrivateRoute
+              exact
+              path='/add-education'
+              component={AddEducation}
+            />
           </Switch>
         </section>
       </Router>
