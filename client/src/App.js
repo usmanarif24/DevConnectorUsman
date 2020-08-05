@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Layout/Navbar";
 import Landing from "./Components/Layout/Landing";
 import CreateProfile from "./Components/profile-form/CreateProfile";
+import EditProfile from "./Components/profile-form/EditProfile";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Components/auth/Login";
 import Register from "./Components/auth/Register";
@@ -41,6 +42,7 @@ const App = () => {
               path='/create-profile'
               component={CreateProfile}
             />
+            <PrivateRoute exact path='/edit-profile' component={EditProfile} />
           </Switch>
         </section>
       </Router>
