@@ -74,6 +74,8 @@ router.post(
     if (status) profileFields.status = req.body.status;
     if (githubusername) profileFields.githubusername = req.body.githubusername;
 
+    // if (skills) profileFields.skills = req.body.skills;
+
     if (skills) {
       profileFields.skills = skills.split(",").map((skill) => skill.trim());
     }
