@@ -14,6 +14,8 @@ import Alert from "./Components/Layout/Alert";
 import PrivateRoute from "./Components/Routing/PrivateRoute";
 import Profile from "./Components/profile/Profile";
 import Posts from "./Components/posts/Posts";
+import Post from "./Components/post/Post";
+
 //redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -61,6 +63,7 @@ const App = () => {
               component={AddEducation}
             />
             <PrivateRoute exact path='/posts' component={Posts} />
+            <PrivateRoute exact path='/posts/:id' component={Post} />
           </Switch>
         </section>
       </Router>
