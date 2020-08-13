@@ -18,7 +18,6 @@ const Landing = ({ isAuthenticated }) => {
             other developers.
           </p>
           <p>Created by Syed Usman Arif</p>
-          <p>Followed along with the course by Brad Traversy</p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>
               Sign Up
