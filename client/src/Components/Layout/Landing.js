@@ -15,8 +15,10 @@ const Landing = ({ isAuthenticated }) => {
           <h1 className='x-large'>Developer Connector</h1>
           <p className='lead'>
             Create a developer profile/portfolio, share posts and get help from
-            other developers. Created by Syed Usman Arif.
+            other developers.
           </p>
+          <p>Created by Syed Usman Arif</p>
+          <p>Followed along with the course by Brad Traversy</p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>
               Sign Up
