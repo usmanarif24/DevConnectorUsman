@@ -298,6 +298,21 @@ button {
   background: var(--light-color);
 }
 
+/* footer*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  justify-content: space-between;
+  opacity: 0.9;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -333,14 +348,14 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat center center/cover;
+  background: url("./img/test.jpg") center center/cover;
   height: 100vh;
 }
 
 .landing-inner {
   color: #fff;
   height: 100%;
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;

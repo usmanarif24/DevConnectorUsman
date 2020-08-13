@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Layout/Navbar";
 import Landing from "./Components/Layout/Landing";
+import Botton from "./Components/Layout/Bottom";
 import CreateProfile from "./Components/profile-form/CreateProfile";
 import Profiles from "./Components/profiles/Profiles";
 import EditProfile from "./Components/profile-form/EditProfile";
@@ -37,6 +38,7 @@ const App = () => {
         <Fragment>
           <Navbar />
           <Route exact path='/' component={Landing} />
+          <Botton />
         </Fragment>
         <section className='container'>
           <Alert />
